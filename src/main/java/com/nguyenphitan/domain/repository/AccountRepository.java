@@ -9,12 +9,12 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import com.nguyenphitan.domain.entity.Account;
+import com.nguyenphitan.domain.entity.Customer;
 
 @Repository
-public interface AccountRepository extends JpaRepository<Account, Integer> {
+public interface AccountRepository extends JpaRepository<Customer, Integer> {
 	@Query(value = "select * from account where email=?", nativeQuery = true)
-	Optional<Account> findAccountByEmail(String email);
+	Optional<Customer> findAccountByEmail(String email);
 	
 	@Modifying
 	@Transactional

@@ -42,6 +42,12 @@ public class Address {
 	private String street;
 	
 	@OneToMany(mappedBy = "address")
-    private Set<Userr> users;
+    private Set<User> users;
+	
+	@OneToMany(mappedBy = "address")
+	private Set<Supplier> suppliers;
+	
+	@OneToMany(mappedBy = "address")
+	private Set<Payment> payments;
     
 }

@@ -7,7 +7,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import com.nguyenphitan.domain.entity.Account;
+import com.nguyenphitan.domain.entity.User;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -30,7 +30,7 @@ public class CustomUserDetails implements UserDetails {
 
 	static final String ROLE_PREFIX = "ROLE_";
 
-    Account user;
+	User user;
 
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {

@@ -18,7 +18,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 
 import com.nguyenphitan.app.request.AccountRegisterRequest;
 import com.nguyenphitan.domain.entity.Account;
-import com.nguyenphitan.domain.entity.Userr;
+import com.nguyenphitan.domain.entity.User;
 import com.nguyenphitan.domain.repository.AccountRepository;
 import com.nguyenphitan.domain.repository.UserRepository;
 import com.nguyenphitan.domain.service.impl.AccountServiceImpl;
@@ -60,7 +60,7 @@ public class AccountServiceImplTest {
 		params.setPhoneNumber("0342366513");
 		when(accountRepository.findAccountByEmail(Mockito.anyString())).thenReturn(null);
 		when(accountRepository.save(Mockito.any())).thenReturn(new Account());
-		when(userRepository.save(Mockito.any())).thenReturn(new Userr());
+		when(userRepository.save(Mockito.any())).thenReturn(new User());
 		accountService.createNewAccount(params);
 	}
 	

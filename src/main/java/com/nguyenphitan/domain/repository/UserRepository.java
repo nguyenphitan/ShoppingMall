@@ -9,11 +9,11 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 
-import com.nguyenphitan.domain.entity.Userr;
+import com.nguyenphitan.domain.entity.User;
 
-public interface UserRepository extends JpaRepository<Userr, Integer>{
+public interface UserRepository extends JpaRepository<User, Integer>{
 	@Query(value = "select * from user where email=?", nativeQuery = true)
-	Optional<Userr> findUserByEmail(String email);
+	Optional<User> findUserByEmail(String email);
 	
 //	@Modifying
 //	@Query(value = "UPDATE user SET full_name=#{fullName}, address=#{address}, phone_number=#{phoneNumber}, "
